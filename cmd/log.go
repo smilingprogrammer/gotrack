@@ -6,17 +6,17 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var stopCommand = &cobra.Command{
+var logCommand = &cobra.Command{
 
-	Use:   "stop",
-	Short: "Stop the current task",
+	Use:   "log",
+	Short: "Show today's task log",
 	Run: func(cmd *cobra.Command, args []string) {
 
-		tracker.StopTask()
+		tracker.ShowLog()
 	},
 }
 
 func init() {
 
-	rootCommand.AddCommand(stopCommand)
+	rootCommand.AddCommand(logCommand)
 }
