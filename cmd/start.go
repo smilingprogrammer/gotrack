@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"gotrack/tracker"
 
 	"github.com/spf13/cobra"
 )
@@ -18,7 +19,7 @@ var startCommand = &cobra.Command{
 			fmt.Println("Task Name required")
 			return
 		}
-
+		tracker.StartTask(args[0])
 	},
 }
 
